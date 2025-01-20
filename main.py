@@ -36,9 +36,11 @@ if uploaded_image:
     
     
     if st.button("Detect",use_container_width=True):
-        st.success(f"The uploaded image is {predicted_class[0].upper()} with {int(predicted_prob[0]*100)} %  prediction accuracy")
+        if predicted_class[0] == 'no_tumor':
+            st.success(f"Image has NO TUMOR with {int(predicted_prob[0]*100)} % prediction accuracy")
+        else:
+            st.success(f"The uploaded image is {predicted_class[0].upper()} with {int(predicted_prob[0]*100)} %  prediction accuracy")
         
 
         
-      
             
