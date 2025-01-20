@@ -36,10 +36,9 @@ if uploaded_image:
     
     
     if st.button("Detect",use_container_width=True):
-        st.success(f"The uploaded image is {predicted_class[0]} with {int(predicted_prob[0]*100)} %  prediction accuracy")
+        st.success(f"The uploaded image is {predicted_class[0].upper()} with {int(predicted_prob[0]*100)} %  prediction accuracy")
         
 
         
-        g='''if st.button("Locate",use_container_width=True):
-            st.info("Locating")'''
+      
             
