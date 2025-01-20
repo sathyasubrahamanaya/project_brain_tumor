@@ -2,7 +2,7 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 from model import model
-from opencv import cv2
+import cv2
 import numpy as np
 import joblib
 import os
